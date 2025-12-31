@@ -1,1 +1,3 @@
-# Portfolio-
+# My Portfolio
+
+This repository contains my personal portfolio website.
