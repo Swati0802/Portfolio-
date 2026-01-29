@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Smart Classroom</title>
+</head>
+<body style="background-color:rgb(225, 248, 252);">
+    <header>
+         <h1 align ="middle" style="background-color:rgb(97, 138, 157);">SMART CLASSROOM PAGE</h1>
+    </header>
+
+    <nav>
+        <a href="#">Subjects</a> <br>
+        <a href="#">Lectures</a> <br>
+        <a href="#">Resources</a> <br>
+    </nav><br><br>
+
+    <section>
+        <article>
+            <h2 style="color: rgb(36, 43, 104);"><u>Student Learning Panel</u></h2><br>
+
+            <form>
+
+                Student Name:
+                <input type="text" placeholder="Enter Your Name"><br><br>
+
+                Email:
+                <input type="email" placeholder="Enter Your E-mail"><br><br>
+
+                Study Hours:
+                <input type="number" placeholder="Enter Study Hours"><br><br>
+
+                Lecture Date:
+                <input type="date"><br><br>
+
+                Lecture Time:
+                <input type="time"><br><br>
+
+                Reference Website:
+                <input type="url" placeholder="Enter Reference Website"><br><br>
+
+                Focus Level:
+                <input type="range" min="1" max="10"><br><br>
+
+                Theme Color:
+                <input type="color"><br><br>
+
+                Subject:
+                <select>
+                    <option>Mathematics</option>
+                    <option>Science</option>
+                    <option>Computer</option>
+                </select><br><br>
+
+                Topic Search:
+                <input list="topics" placeholder="Enter Topic">
+                <datalist id="topics">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JavaScript">
+                </datalist><br><br>
+
+                Notes:
+                <textarea rows="4" cols="30" placeholder="Write The Note"></textarea>
+
+            </form>
+        </article>
+    </section><br><br>
+
+    <section>
+        <h2 style="color:rgb(36, 43, 104);">Video Lecture :</h2>
+        <video width="320" controls>
+            <source src="lecture.mp4" type="video/mp4">
+        </video>
+    </section><br><br>
+
+    <section>
+        <h2 style="color:rgb(36, 43, 104);">Audio Explanation :</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+    </section><br><br>
+    
+    <input type="submit" value="Save Preferences" style="background-color: rgb(3, 174, 174);">
+    <input type="reset" value="Clear Data" style="background-color:rgb(3, 174, 174);"><br><br><hr>
+
+    <footer>
+        <p>© 2026 Smart Classroom</p>
+    </footer>
+
+</body>
+</html>
