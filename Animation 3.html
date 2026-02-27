@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            div{
+                width: 150px;
+                height: 150px;
+                animation-duration: 2s;
+                position: relative;
+                background-color: black;
+                animation-name: Animation;
+                margin: 100px;
+                animation-iteration-count: 2;
+                animation-delay: 1s;
+            }
+            div:hover{
+                width: 250px;
+                height: 250px;
+                background-color:rgb(107, 4, 4);
+            }
+            @keyframes Animation{
+                0%{background-color:black; left: 0px; top: 0px;}
+                25%{background-color: rgb(32, 31, 31); left: 200px; top: 0px;}
+                50%{background-color: rgb(56, 56, 56); left:200px; top:200px;}
+                75%{background-color: rgb(107, 105, 105); left:0px; top:200px;}
+                100%{background-color: rgb(202, 202, 202); left:0px; top:0px;}
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
