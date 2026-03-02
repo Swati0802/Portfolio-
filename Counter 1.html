@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <style>
+            body{
+                counter-reset:branch ;
+            }
+            h4::before{
+                counter-increment:branch;
+                content: "Branch" counter(branch)":";
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Branches</h3>
+        <h4>IT</h4>
+        <h4>CE</h4>
+        <h4>EC</h4>
+    </body>
+</html>
