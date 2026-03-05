@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            body{
+                counter-reset: section;
+                background-color:aliceblue;
+            }
+            h3{
+                counter-increment:section;
+                counter-reset:sub ;
+                color: rgb(23, 17, 110);
+            }
+            h3::before{
+                content: counter(section)"." ;
+            }
+            h4{
+                counter-increment:sub;
+                color: rgb(12, 41, 85);
+            }
+            h4::before{
+                content: counter(section)"." counter(sub)":";
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Branches</h3>
+        <h4>IT</h4>
+        <h4>CE</h4>
+        <h4>EC</h4><br>
+
+        <h3>Other Branch</h3>
+        <h4>ME</h4>
+        <h4>Civil</h4>
+    </body>
+</html>
