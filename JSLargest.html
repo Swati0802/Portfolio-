@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="Num"></p>
+        <script>
+            let x = prompt("Enter the value of X ");
+            let y =prompt("Enter the value of Y ");
+            let z =prompt("Enter the value of Z ");
+
+            x= Number(x);
+            y=Number(y);
+            z=Number(z);
+
+            document.write("Value of X : "+ x +"<br> <br>");
+            document.write("Value of Y : "+ y +"<br> <br>");
+            document.write("Value of Z : "+ z +"<br> <br>");
+
+            if(x>y && x>z){
+                document.getElementById("Num").innerHTML= "X is Largest "+x;
+            }
+            else if(y>x && y>z){
+                document.getElementById("Num").innerHTML= "y is Largest "+y;
+            }
+            else{
+                document.getElementById("Num").innerHTML= "Z is Largest "+z;
+            }
+ 
+
+        </script>
+    </body>
+</html>
