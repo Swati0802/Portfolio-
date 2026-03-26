@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <p id="form"></p>
+        <form>
+            Name :
+            <input type="text" id="name"><br><br>
+
+            E-Mail :
+            <input type="email" id="email"><br><br>
+            
+            Mo. No. :
+            <input type="tel" id="mo"><br><br>
+
+            <button type="button" onclick="val()">Submit</button>
+        </form>
+
+        <script>
+            function val(){
+                let name= document.getElementById("name").value;
+                let email= document.getElementById("email").value;
+                let mo = document.getElementById("mo").value;
+
+            if(name.trim() === ""){
+                alert("Name Can not be empty");
+            }
+            else if (email.trim() ==="" || !email.includes("@")){
+                alert("Invalid E-Mail");
+            }
+            else if (mo.trim() ==="" || mo.length !== 10){
+                alert("Invalid Mo. no.");
+            }
+            else{
+            alert("Form Submitted Successfully!");
+            }
+        }
+        </script>
+    </body>
+</html>
