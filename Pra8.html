@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <style>
+            .navbar ul {
+                list-style-type: none;
+                margin: 5px;
+                padding: 5px;
+                background-color: rgb(246, 236, 224);
+                display: flex;
+            }
+            .navbar ul li{
+                position:relative;
+            }
+            .navbar ul li a{
+                display: block;
+                color: rgb(15, 15, 82);
+                padding: 30px;
+                text-decoration: none;
+                font-size: large;
+            }
+            .navbar ul li a:hover{
+                background-color:pink;
+            }
+            .navbar ul ul{
+                display: none;
+                position:absolute;
+                background-color:mistyrose;
+                top:100%;
+                left: 10%;
+                min-width: 180px;
+                flex-direction: column;
+            }
+            .navbar ul ul li{
+                width: 100%;
+            }
+            .navbar ul li:hover ul{
+                display:inline-flex;
+            }
+            .navbar ul ul ul{
+                left: 180px;
+                top:2px;
+            }
+            .navbar ul ul ul a{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Department</a>
+                    <div id="menu">
+                    <ul>
+                        <li><a href="#">BVM</a></li>
+                        <li><a href="#">Engineering</a>
+                            <ul>
+                                <li><a href="#">IT</a></li>
+                                <li><a href="#">CE</a></li>
+                                <li><a href="#">ME</a></li>
+                                <li><a href="#">EC</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+                
+            </ul>
+        </div>
+    </body>
+</html>
