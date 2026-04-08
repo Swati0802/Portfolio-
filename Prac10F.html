@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Hover</title>
+    <style>
+        .color-box {
+            width: 150px;
+            height: 80px;
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            line-height: 80px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="color-box" style="background:Pink;"
+     onmouseover="changeColor('Pink')"
+     onmouseout="resetColor()">PINK</div>
+
+<div class="color-box" style="background:green;"
+     onmouseover="changeColor('green')"
+     onmouseout="resetColor()">GREEN</div>
+
+<div class="color-box" style="background:darkblue;"
+     onmouseover="changeColor('blue')"
+     onmouseout="resetColor()">BLUE</div>
+
+<script>
+function changeColor(color) {
+    document.body.style.backgroundColor = color;
+    window.status = "Color: " + color;
+}
+
+function resetColor() {
+    document.body.style.backgroundColor = "white";
+    window.status = "";
+}
+</script>
+
+</body>
+</html>
