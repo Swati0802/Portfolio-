@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <form onsubmit="return validate()">
+            Name : 
+            <input type="text" id="pname">
+            Train no. :
+            <input type="number" id="tno">
+            <button type="submit">BOOK</button>
+        </form>
+        <script>
+            function validate(){
+                let name = document.getElementById("pname").value;
+                let tno = document.getElementById("tno").value;
+
+                if (!name || !tno){
+                    alert("Fill all Fields");
+                    return false;
+                    alert("Booking Success!");
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>
