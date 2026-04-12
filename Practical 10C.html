@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <form onsubmit="return validate()">
+            Name:
+            <input type="text" id="name"><br><br>
+
+            E-mail:
+            <input type="text" id="mail"><br><br>
+
+            <input type="submit">
+        </form>
+
+        <script>
+            function validate(){
+                let name=document.getElementById("name").value;
+                let email=document.getElementById("mail").value;
+
+                if(name===""){
+                alert("Name Can not be empty");
+                return false;
+                }
+                if(!email.includes("@")){
+                    alert("Invalid E-mail");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
