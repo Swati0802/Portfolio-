@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Railway Form</title>
+    </head>
+    <body>
+        <form onsubmit="return validate()">
+            Name:
+            <input type="text" id="pname"><br><br>
+
+            Train No.:
+            <input type="number" id="tno"><br><br>
+
+            <button type="submit">BOOK</button>
+        </form>
+        <script>
+            function validate(){
+                let name=document.getElementById("pname").value;
+                let tno=document.getElementById("tno").value;
+
+                if(!name||!tno){
+                    alert("Fill all fields");
+                    return false;
+                    alert("booking Success!");
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>
