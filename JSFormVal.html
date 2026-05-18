@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Awesome Form Validation</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #5b86e5;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-box{
+            width: 400px;
+            background-color: #fff8dc;
+            padding: 25px;
+            border: 8px groove darkblue;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px black;
+        }
+
+        h2{
+            text-align: center;
+            color: darkblue;
+        }
+
+        label{
+            font-weight: bold;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 2px solid gray;
+        }
+
+        .gender{
+            width: auto;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: navy;
+        }
+
+        #message{
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h2>Registration Form</h2>
+
+    <label>Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Email</label>
+    <input type="email" id="email" placeholder="Enter your email">
+
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Enter password">
+
+    <label>Phone Number</label>
+    <input type="number" id="phone" placeholder="Enter phone number">
+
+    <label>Date of Birth</label>
+    <input type="date" id="dob">
+
+    <label>Gender</label><br>
+    <input type="radio" name="gender" class="gender"> Male
+    <input type="radio" name="gender" class="gender"> Female
+    <br><br>
+
+    <label>Course</label>
+    <select id="course">
+        <option value="">Select Course</option>
+        <option>BCA</option>
+        <option>B.Tech</option>
+        <option>BBA</option>
+        <option>MCA</option>
+    </select>
+
+    <label>Address</label>
+    <textarea id="address" rows="3" placeholder="Enter address"></textarea>
+
+    <button onclick="validateForm()">Submit</button>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+function validateForm(){
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let phone = document.getElementById("phone").value;
+    let dob = document.getElementById("dob").value;
+    let course = document.getElementById("course").value;
+    let address = document.getElementById("address").value;
+
+    let message = document.getElementById("message");
+
+    if(name=="" || email=="" || password=="" || phone=="" || dob=="" || course=="" || address==""){
+        message.style.color = "red";
+        message.innerHTML = "Please fill all fields";
+    }
+
+    else if(password.length < 6){
+        message.style.color = "red";
+        message.innerHTML = "Password must be at least 6 characters";
+    }
+
+    else if(phone.length != 10){
+        message.style.color = "red";
+        message.innerHTML = "Phone number must be 10 digits";
+    }
+
+    else{
+        message.style.color = "green";
+        message.innerHTML = "Form Submitted Successfully";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
